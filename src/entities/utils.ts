@@ -1,4 +1,4 @@
-import type { FormApi, SubmissionErrors } from "final-form";
+import type { FormApi, SubmissionErrors, ValidationErrors } from "final-form";
 
 export type Nullable<T> = T | null;
 
@@ -7,3 +7,7 @@ export type OnSubmitForm<FormValues> = (
   form: FormApi<FormValues, Partial<FormValues>>,
   callback?: (errors?: SubmissionErrors) => void
 ) => SubmissionErrors | Promise<SubmissionErrors> | void;
+
+export type ValidateForm<FormValues> = (
+  values: FormValues
+) => ValidationErrors | Promise<ValidationErrors>;

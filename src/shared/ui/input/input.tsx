@@ -18,15 +18,18 @@ export const Input = ({
   helperText,
   isInvalid,
   gutterBottom = true,
+  placeholder,
   ...inputProps
-}: InputProps) => (
-  <FormControl isInvalid={isInvalid} marginBottom={gutterBottom ? 3 : 0}>
-    <FormLabel>{label}</FormLabel>
-    <ChakraInput {...inputProps} />
-    {isInvalid ? (
-      <FormHelperText>{helperText}</FormHelperText>
-    ) : (
-      <FormErrorMessage>helperText</FormErrorMessage>
-    )}
-  </FormControl>
-);
+}: InputProps) => {
+  const HelperTextComponent = isInvalid ? FormErrorMessage : FormHelperText;
+
+  return (
+    <FormControl isInvalid={isInvalid} marginBottom={gutterBottom ? 3 : 0}>
+      {label && <FormLabel>{label}</FormLabel>}
+
+      <ChakraInput placeholder={placeholder || label} {...inputProps} />
+
+      {isInvalid && <HelperTextComponent>{helperText}</HelperTextComponent>}
+    </FormControl>
+  );
+};

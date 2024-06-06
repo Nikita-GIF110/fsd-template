@@ -1,78 +1,51 @@
-import { useEffect } from "react";
+import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
-import {
-  Container,
-  Flex,
-  useDisclosure,
-  useColorMode,
-  Button,
-  Drawer,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  List,
-  ListItem,
-} from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { UserPanel } from "features/layout/ui/user-panel";
 import { MenuList } from "features/layout/ui/menu-list";
-import { useUser } from "entities/user";
+import { Header } from "features/layout/ui/header";
+import { Footer } from "features/layout/ui/footer";
+import { PageLoader } from "features/layout/ui/page-loader";
+import { LayoutContainer } from "features/layout/ui/layout-container";
 import { useAuth } from "entities/auth";
-import { NAVIGATION } from "shared/config/base";
+import { useApp } from "entities/app";
+import { useTranslate } from "shared/lib/useTranslate";
 
 export const Layout = () => {
-  const user = useUser((state) => state.user);
-  const token = useAuth((state) => state.token);
+  const user = useAuth((state) => state.user);
   const isAuthorized = useAuth((state) => state.isAuthorized);
-
-  const fetchUser = useUser((state) => state.fetchUser);
   const logOut = useAuth((state) => state.logOut);
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const { toggleColorMode } = useColorMode();
+  const translate = useTranslate();
+  const appRady = useApp((state) => state.appRady);
 
-  useEffect(() => {
-    if (token) {
-      fetchUser("1");
-    }
-  }, [fetchUser, token]);
+  const navigation = [{ label: translate("Layout.link_home"), to: "/" }];
 
   return (
     <>
-      <Container flexGrow={1}>
-        <Flex
-          as="header"
-          paddingY={2}
-          justifyContent="space-between"
-          alignItems="center"
-        >
-          <Flex>
-            <List display="flex" alignItems="center">
-              <ListItem mr={3}>
-                <Button onClick={onOpen}>Menu</Button>
-              </ListItem>
-            </List>
+      <LayoutContainer height="100%" display="flex" flexDirection="column">
+        <Header
+          centerNode={<MenuList list={navigation} marginRight="auto" />}
+          rightNode={
+            <UserPanel
+              user={user}
+              isAuthorized={isAuthorized}
+              logOut={logOut}
+            />
+          }
+        />
 
-            <MenuList list={NAVIGATION} />
-          </Flex>
+        <Box flexGrow={1} position="relative">
+          {appRady ? (
+            <Suspense fallback={<PageLoader />}>
+              <Outlet />
+            </Suspense>
+          ) : (
+            <PageLoader />
+          )}
+        </Box>
 
-          <UserPanel user={user} isAuthorized={isAuthorized} logOut={logOut} />
-        </Flex>
-
-        <Outlet />
-      </Container>
-
-      <Drawer isOpen={isOpen} onClose={onClose}>
-        <DrawerOverlay />
-
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader>Menu</DrawerHeader>
-          <DrawerFooter mt="auto">
-            <Button onClick={toggleColorMode}>toggleColorMode</Button>
-          </DrawerFooter>
-        </DrawerContent>
-      </Drawer>
+        <Footer>footer</Footer>
+      </LayoutContainer>
     </>
   );
 };
