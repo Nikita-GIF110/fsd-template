@@ -1,3 +1,5 @@
+import { LANGUAGE_NAME } from "shared/config/base";
+
 // we might have translation as an object, if it's plural
 type Translation = string | Record<string, string>;
 type Keyset = Record<string, Translation>;
@@ -96,9 +98,10 @@ export class I18N<KeysetsMap extends Record<string, LanguageConfig>> {
       this.lang = newLang;
 
       const html = document.body.parentElement;
+      window.localStorage.setItem(LANGUAGE_NAME, newLang.toString());
 
       if (html) {
-        html.setAttribute("lang", newLang.toString())
+        html.setAttribute("lang", newLang.toString());
       }
 
       this.subscribers.forEach((cb) => cb(newLang));

@@ -4,6 +4,7 @@ import { Button } from "./components/button";
 import { Input } from "./components/input";
 import { Textarea } from "./components/textarea";
 import { Modal } from "./components/modal";
+import { Select } from "./components/select";
 import { sizes } from "./sizes";
 
 export const theme = extendTheme({
@@ -13,5 +14,5 @@ export const theme = extendTheme({
   },
   sizes,
   colors,
-  components: { Button, Input, Textarea, Modal },
+  components: { Button, Input, Textarea, Modal, Select },
 });
