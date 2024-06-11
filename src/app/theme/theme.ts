@@ -1,11 +1,11 @@
 import { extendTheme } from "@chakra-ui/react";
-import { colors } from "./colors";
 import { Button } from "./components/button";
 import { Input } from "./components/input";
 import { Textarea } from "./components/textarea";
 import { Modal } from "./components/modal";
 import { Select } from "./components/select";
 import { sizes } from "./sizes";
+import { colors } from "shared/config/colors";
 
 export const theme = extendTheme({
   fonts: {

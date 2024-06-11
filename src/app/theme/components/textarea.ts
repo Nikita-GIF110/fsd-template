@@ -1,5 +1,5 @@
 import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
-import { colors } from "../colors";
+import { colors } from "shared/config/colors";
 
 export const Textarea = defineStyleConfig({
   baseStyle: {

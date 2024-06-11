@@ -1,5 +1,5 @@
 import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
-import { colors } from "../colors";
+import { colors } from "shared/config/colors";
 
 const roundedOutline = {
   borderRadius: "32px",
@@ -77,5 +77,6 @@ export const Button = defineStyleConfig({
         borderColor: colors.gray.primary,
       },
     }),
+    ghost: defineStyle({}),
   },
 });

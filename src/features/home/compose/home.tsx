@@ -1,17 +1,27 @@
 import { Flex, Box, Text, useDisclosure, Heading } from "@chakra-ui/react";
+import { SCHEMA } from "features/home/models";
 import { Button } from "shared/ui/button";
 import { Input, InputFormField } from "shared/ui/input";
 import { Textarea, TextareaFormField } from "shared/ui/textarea";
-import { Select } from "shared/ui/select";
+import { Select, SelectFormField } from "shared/ui/select";
+import { Collapse } from "shared/ui/collapse";
 import { FormDialog } from "shared/ui/dialog";
 import { useI18N } from "shared/lib/useI18n";
 import { useTranslate } from "shared/lib/useTranslate";
+import { useValidationSchema } from "shared/lib/useValidationSchema";
 
 export const Home = () => {
   const translate = useTranslate();
   const { lang, setLang } = useI18N();
 
-  const { isOpen, onClose, onOpen } = useDisclosure();
+  const formDialog = useDisclosure();
+  const collapse = useDisclosure();
+
+  const validate = useValidationSchema<{
+    username: string;
+    description: string;
+    select: string;
+  }>(SCHEMA);
 
   const onChangelang = () => {
     switch (lang) {
@@ -34,11 +44,12 @@ export const Home = () => {
       </Heading>
 
       <Flex columnGap={3}>
+        {/* Buttons */}
         <Flex direction="column" rowGap={3} flexGrow={1} flexBasis="25%">
           <Text>{translate("Home.buttons")} MD</Text>
 
           <Box>
-            <Button marginRight={3} onClick={onOpen}>
+            <Button marginRight={3} onClick={formDialog.onOpen}>
               rounded Outline
             </Button>
             <Button variant="circleOutline" onClick={onChangelang}>
@@ -90,6 +101,7 @@ export const Home = () => {
           </Box>
         </Flex>
 
+        {/* Inputs */}
         <Flex direction="column" rowGap={3} flexGrow={1} flexBasis="25%">
           <Text>{translate("Home.inputs")}</Text>
 
@@ -99,6 +111,7 @@ export const Home = () => {
           <Input placeholder="input lg" size="lg" />
         </Flex>
 
+        {/* Textarea */}
         <Flex direction="column" rowGap={3} flexGrow={1} flexBasis="25%">
           <Text>{translate("Home.textareas")}</Text>
 
@@ -108,6 +121,7 @@ export const Home = () => {
           <Textarea placeholder="textarea lg" size="lg" />
         </Flex>
 
+        {/* Select */}
         <Flex direction="column" rowGap={3} flexGrow={1} flexBasis="25%">
           <Text>{translate("Home.select")}</Text>
 
@@ -120,10 +134,21 @@ export const Home = () => {
               { label: "optionoptionoption-3", value: "option-3" },
             ]}
           />
+
+          <Collapse
+            in={collapse.isOpen}
+            onToggle={collapse.onToggle}
+            title="Collapse title"
+          ></Collapse>
         </Flex>
       </Flex>
 
-      <FormDialog isOpen={isOpen} onClose={onClose} onSubmit={() => {}}>
+      <FormDialog
+        isOpen={formDialog.isOpen}
+        onClose={formDialog.onClose}
+        onSubmit={(f) => console.log(f)}
+        validate={validate}
+      >
         {() => (
           <>
             <InputFormField
@@ -134,6 +159,20 @@ export const Home = () => {
               name="description"
               label={translate("Home.user_from_description")}
             />
+
+            <SelectFormField
+              name="select"
+              label="select"
+              options={[
+                { label: "option-1", value: "option-1" },
+                { label: "option-2", value: "option-2" },
+                { label: "optionoptionoption-3", value: "option-3" },
+              ]}
+            />
+
+            <Button type="submit" fullwidth>
+              submit
+            </Button>
           </>
         )}
       </FormDialog>
