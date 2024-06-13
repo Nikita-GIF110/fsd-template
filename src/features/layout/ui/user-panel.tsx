@@ -10,11 +10,10 @@ import {
   Box,
   Link,
 } from "@chakra-ui/react";
-import type { UserEntity } from "entities/user";
 import type { Nullable } from "entities/utils";
 
 interface UserPanelProps {
-  user: Nullable<UserEntity>;
+  user: Nullable<{ name: string }>;
   isAuthorized: boolean;
   logOut: () => void;
 }
