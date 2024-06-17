@@ -1,6 +1,6 @@
 /* Halvar Breit Start */
 @font-face {
-  font-family: "Halvar Breit Blk";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-BlkSlanted.eot");
   src:
     local("Halvar Breitschrift Black Slanted"),
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Blk";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-Blk.eot");
   src:
     local("Halvar Breitschrift Black"),
@@ -35,7 +35,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Blk SuSlanted";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-BlkSuSlanted.eot");
   src:
     local("Halvar Breitschrift Black SuperSlanted"),
@@ -54,7 +54,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Lt";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-Lt.eot");
   src:
     local("Halvar Breitschrift Light"),
@@ -70,7 +70,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Hl SuSlanted";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-HlSuSlanted.eot");
   src:
     local("Halvar Breitschrift Hairline SuperSlanted"),
@@ -89,7 +89,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Md";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-Md.eot");
   src:
     local("Halvar Breitschrift Medium"),
@@ -105,7 +105,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit XTh SuSlanted";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-XThSuSlanted.eot");
   src:
     local("Halvar Breitschrift ExtraThin SuperSlanted"),
@@ -124,7 +124,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Rg";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-Bd.eot");
   src:
     local("Halvar Breitschrift Bold"),
@@ -140,7 +140,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Md SuSlanted";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-MdSuSlanted.eot");
   src:
     local("Halvar Breitschrift Medium SuperSlanted"),
@@ -159,7 +159,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Hl";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-HlSlanted.eot");
   src:
     local("Halvar Breitschrift Hairline Slanted"),
@@ -178,7 +178,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Rg";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-RgSlanted.eot");
   src:
     local("Halvar Breitschrift Regular Slanted"),
@@ -197,7 +197,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit XBd";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-XBd.eot");
   src:
     local("Halvar Breitschrift ExtraBold"),
@@ -213,7 +213,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit XTh";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-XThSlanted.eot");
   src:
     local("Halvar Breitschrift ExtraThin Slanted"),
@@ -232,7 +232,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Th SuSlanted";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-ThSuSlanted.eot");
   src:
     local("Halvar Breitschrift Thin SuperSlanted"),
@@ -251,7 +251,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit XBd SuSlanted";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-XBdSuSlanted.eot");
   src:
     local("Halvar Breitschrift ExtraBold SuperSlanted"),
@@ -270,7 +270,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Rg SuSlanted";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-RgSuSlanted.eot");
   src:
     local("Halvar Breitschrift Regular SuperSlanted"),
@@ -289,7 +289,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit XBd";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-XBdSlanted.eot");
   src:
     local("Halvar Breitschrift ExtraBold Slanted"),
@@ -308,7 +308,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Lt SuSlanted";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-LtSuSlanted.eot");
   src:
     local("Halvar Breitschrift Light SuperSlanted"),
@@ -327,7 +327,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Th";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-Th.eot");
   src:
     local("Halvar Breitschrift Thin"),
@@ -343,7 +343,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit XTh";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-XTh.eot");
   src:
     local("Halvar Breitschrift ExtraThin"),
@@ -359,7 +359,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Rg SuSlanted";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-BdSuSlanted.eot");
   src:
     local("Halvar Breitschrift Bold SuperSlanted"),
@@ -378,7 +378,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Th";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-ThSlanted.eot");
   src:
     local("Halvar Breitschrift Thin Slanted"),
@@ -397,7 +397,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Lt";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-LtSlanted.eot");
   src:
     local("Halvar Breitschrift Light Slanted"),
@@ -416,7 +416,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Hl";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-Hl.eot");
   src:
     local("Halvar Breitschrift Hairline"),
@@ -432,7 +432,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Md";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-MdSlanted.eot");
   src:
     local("Halvar Breitschrift Medium Slanted"),
@@ -451,7 +451,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Rg";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-BdSlanted.eot");
   src:
     local("Halvar Breitschrift Bold Slanted"),
@@ -470,7 +470,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Hl";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-Hl_1.eot");
   src:
     local("Halvar Breitschrift Hairline"),
@@ -487,7 +487,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Breit Rg";
+  font-family: "Halvar Breitschrift";
   src: url("../../assets/fonts/HalvarBreit/HalvarBreit-Rg.eot");
   src:
     local("Halvar Breitschrift Regular"),

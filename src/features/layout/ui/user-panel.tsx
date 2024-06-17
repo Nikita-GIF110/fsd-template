@@ -1,55 +1,25 @@
 import { Link as ReactRouterLink } from "react-router-dom";
-import {
-  Avatar,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  Box,
-  Link,
-} from "@chakra-ui/react";
-import type { Nullable } from "entities/utils";
+import { Box, Flex } from "@chakra-ui/react";
+import { UserIcon } from "assets/icons/user-icon";
+import { colors } from "shared/config/colors";
 
-interface UserPanelProps {
-  user: Nullable<{ name: string }>;
-  isAuthorized: boolean;
-  logOut: () => void;
-}
+// interface UserPanelProps {
+//   isAuthorized: boolean;
+// }
 
-export const UserPanel = ({ user, isAuthorized, logOut }: UserPanelProps) => {
-  const userName = isAuthorized ? user?.name : undefined;
+export const UserPanel = () => (
+  <Flex
+    as={ReactRouterLink}
+    alignItems="center"
+    backgroundColor={colors.white}
+    color={colors.black}
+    padding="16px 24px"
+    gap="12px"
+    maxWidth="240px"
+    borderRadius="base"
+  >
+    <Box as={UserIcon} width="24px" height="24px" textTransform="uppercase" />
 
-  return (
-    <Menu>
-      <MenuButton borderRadius="100%">
-        <Avatar
-          size="md"
-          name={isAuthorized ? userName : undefined}
-          bg="red.500"
-        />
-      </MenuButton>
-      <MenuList paddingX={2}>
-        {isAuthorized ? (
-          <>
-            <MenuItem as={ReactRouterLink} to="/profile">
-              {user?.name}
-            </MenuItem>
-            <MenuDivider />
-            <MenuItem as={Button} onClick={logOut}>
-              Выход
-            </MenuItem>
-          </>
-        ) : (
-          <Box maxWidth="250px" textAlign="center">
-            Для просмотра личного кабинета нужна{" "}
-            <Link as={ReactRouterLink} color="blue.500" to="/auth/sign-in">
-              Авторизация
-            </Link>
-          </Box>
-        )}
-      </MenuList>
-    </Menu>
-  );
-};
+    <Box fontWeight={700}>Личный кабинет</Box>
+  </Flex>
+);
