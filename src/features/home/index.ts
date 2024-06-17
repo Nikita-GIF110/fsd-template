@@ -1,1 +1,3 @@
-export { Home } from "./compose/home";
+import { lazy } from "react";
+
+export default lazy(() => import("./compose/home"));

@@ -1,1 +1,3 @@
-export { Error404 } from "./compose/error404";
+import { lazy } from "react";
+
+export default lazy(() => import("./compose/error404"));

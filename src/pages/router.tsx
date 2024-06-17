@@ -6,6 +6,13 @@ import { ErrorRoute } from "./error-page";
 export const router = createBrowserRouter([
   {
     element: <Layout />,
-    children: [HomeRoute, ErrorRoute],
+    children: [
+      HomeRoute,
+      ErrorRoute,
+      {
+        path: "/protected",
+        element: <div>Protected Route</div>,
+      },
+    ],
   },
 ]);

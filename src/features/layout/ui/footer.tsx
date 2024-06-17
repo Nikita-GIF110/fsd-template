@@ -12,6 +12,7 @@ export const Footer = ({ children, ...footerProps }: FooterProps) => (
     paddingY={2}
     display="flex"
     alignItems="center"
+    marginTop="auto"
     {...footerProps}
   >
     {children}

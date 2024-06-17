@@ -1,9 +1,9 @@
-import { Center, Box, Heading } from "@chakra-ui/react";
+import { Heading, Flex } from "@chakra-ui/react";
 
-export const Error404 = () => (
-  <Center flexDirection="column" height="100%">
-    <Box paddingY={2}>
-      <Heading as="h1">404</Heading>
-    </Box>
-  </Center>
+const Error404 = () => (
+  <Flex paddingY={2} flexGrow={1} alignItems="center" justifyContent="center">
+    <Heading as="h1">404</Heading>
+  </Flex>
 );
+
+export default Error404;

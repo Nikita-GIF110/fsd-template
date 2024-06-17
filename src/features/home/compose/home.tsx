@@ -10,7 +10,7 @@ import { useI18N } from "shared/lib/useI18n";
 import { useTranslate } from "shared/lib/useTranslate";
 import { useValidationSchema } from "shared/lib/useValidationSchema";
 
-export const Home = () => {
+const Home = () => {
   const translate = useTranslate();
   const { lang, setLang } = useI18N();
 
@@ -38,7 +38,7 @@ export const Home = () => {
   };
 
   return (
-    <>
+    <Box flexGrow={1}>
       <Heading marginBottom={3}>
         {translate("Home.header")} {lang}
       </Heading>
@@ -176,6 +176,8 @@ export const Home = () => {
           </>
         )}
       </FormDialog>
-    </>
+    </Box>
   );
 };
+
+export default Home;

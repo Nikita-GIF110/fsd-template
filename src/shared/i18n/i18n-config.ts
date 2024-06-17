@@ -1,7 +1,8 @@
-import { I18N, createPluralize } from "shared/lib/i18n";
 import { en } from "assets/keysets/en-keyset";
 import { ru } from "assets/keysets/ru-keyset";
 import { LANGUAGE_NAME, DEFAULT_LANGUAGE } from "shared/config/base";
+import { createPluralize } from "./create-pluralize";
+import { I18N } from "./i18n";
 
 const pluralizeEn = createPluralize("en");
 const pluralizeRu = createPluralize("ru");
