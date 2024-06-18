@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import { Box, Flex } from "@chakra-ui/react";
 import DecorSvg from "assets/images/home/about-decor-svg.svg?react";
 import type { SocialLink as SocialLinkType } from "features/home/models";
@@ -7,11 +6,7 @@ import { AboutHeader } from "../ui/about-header";
 import { SocialLink } from "../ui/social-link";
 
 interface AboutProps {
-  links: Array<
-    SocialLinkType & {
-      icon: ReactNode;
-    }
-  >;
+  links: Array<SocialLinkType>;
 }
 
 export const About = ({ links = [] }: AboutProps) => (
