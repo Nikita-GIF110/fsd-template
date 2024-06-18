@@ -8,13 +8,12 @@ interface ButtonProps extends ChakraButtonProps {
 export const Button = ({
   children,
   fullwidth,
-  variant = "roundedOutline",
   ...otherButtonProps
 }: ButtonProps) => (
   <ChakraButton
     width={fullwidth ? "100%" : "auto"}
-    variant={variant}
     {...otherButtonProps}
+    height="auto"
   >
     {children}
   </ChakraButton>

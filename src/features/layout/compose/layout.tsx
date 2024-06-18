@@ -1,38 +1,52 @@
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import { UserPanel } from "features/layout/ui/user-panel";
 import { MenuList } from "features/layout/ui/menu-list";
 import { Header } from "features/layout/ui/header";
 import { Footer } from "features/layout/ui/footer";
 import { PageLoader } from "features/layout/ui/page-loader";
-import { LayoutContainer } from "features/layout/ui/layout-container";
 import { Logo } from "features/layout/ui/logo";
+import { LanguageDropdown } from "features/layout/ui/language-dropdown";
 import { NAVIGATION } from "features/layout/config/base";
-// import { useTranslate } from "shared/lib/useTranslate";
+import type { SelectOption } from "entities/utils";
+import { useI18N } from "shared/lib/useI18n";
+
+const languages = [
+  { label: "RU", value: "ru" },
+  { label: "EN", value: "en" },
+];
 
 export const Layout = () => {
-  // const translate = useTranslate();
+  const { setLang } = useI18N();
+
+  const setLanguage = (selectedLanguage: SelectOption) => {
+    setLang(selectedLanguage.value as "ru" | "en");
+  };
 
   return (
     <>
-      <Header
-        leftNode={
-          <Flex maxWidth="240px" flexGrow={1} alignItems="center">
-            <Logo />
-          </Flex>
-        }
-        centerNode={<MenuList list={NAVIGATION} margin="0 auto" />}
-        rightNode={<UserPanel />}
-      />
+      <Box position="absolute" top={0} left={0} width="100%">
+        <Header
+          position="relative"
+          zIndex={100}
+          leftNode={
+            <Flex maxWidth="240px" flexGrow={1} alignItems="center">
+              <Logo marginRight="auto" />
 
-      <LayoutContainer height="100%" display="flex" flexDirection="column">
-        <Suspense fallback={<PageLoader />}>
-          <Outlet />
-        </Suspense>
+              <LanguageDropdown languages={languages} onChage={setLanguage} />
+            </Flex>
+          }
+          centerNode={<MenuList list={NAVIGATION} margin="0 auto" />}
+          rightNode={<UserPanel />}
+        />
+      </Box>
 
-        <Footer>footer</Footer>
-      </LayoutContainer>
+      <Suspense fallback={<PageLoader />}>
+        <Outlet />
+      </Suspense>
+
+      <Footer>footer</Footer>
     </>
   );
 };

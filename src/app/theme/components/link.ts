@@ -1,7 +1,7 @@
-import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
+import { defineStyle, defineStyleConfig } from "@chakra-ui/styled-system";
 import { colors } from "shared/config/colors";
 
-export const Button = defineStyleConfig({
+export const Link = defineStyleConfig({
   variants: {
     large: defineStyle({
       textAlign: "center",
@@ -15,6 +15,8 @@ export const Button = defineStyleConfig({
       backgroundColor: colors.green.primary,
       height: "auto",
       borderRadius: "md",
+      display: "flex",
+      alignItems: "center",
 
       _hover: {
         backgroundColor: colors.green.secondary,
@@ -35,24 +37,14 @@ export const Button = defineStyleConfig({
       backgroundColor: colors.green.primary,
       height: "auto",
       borderRadius: "md",
+      display: "flex",
+      alignItems: "center",
 
       _hover: {
         backgroundColor: colors.green.secondary,
       },
       _active: {
         backgroundColor: colors.gray.secondary,
-      },
-    }),
-
-    ghost: defineStyle({
-      backgroundColor: colors.transparent,
-
-      _hover: {
-        backgroundColor: colors.transparent,
-      },
-
-      _active: {
-        backgroundColor: colors.transparent,
       },
     }),
   },

@@ -35,7 +35,43 @@ const MenuItem = ({ to, children }: MenuItemProps) => (
 export const MenuList = ({ list, ...otherListProps }: MenuListProps) => (
   <List display="flex" alignItems="center" {...otherListProps}>
     {list.map((link, index) => (
-      <ListItem key={link.label} position="relative">
+      <ListItem
+        key={link.label}
+        position="relative"
+        _before={{
+          content: "''",
+          position: "absolute",
+          top: "-1000%",
+          left: "50%",
+          display: "inline-block",
+          backgroundColor: colors.white,
+          borderRadius: "4px",
+          transform: "translateX(-50%) rotate(-45deg)",
+          width: "16px",
+          height: "16px",
+          transition: "top 0.3s",
+        }}
+        _after={{
+          content: "''",
+          position: "absolute",
+          bottom: "-5px",
+          left: "50%",
+          transform: "translateX(-50%) scale(0)",
+          display: "block",
+          height: "2px",
+          width: "100%",
+          backgroundColor: colors.white,
+          transition: "transform 0.3s",
+        }}
+        _hover={{
+          _before: {
+            top: "-225%",
+          },
+          _after: {
+            transform: "translateX(-50%) scale(1)",
+          }
+        }}
+      >
         <MenuItem to={link.to}>
           {link.label}
 

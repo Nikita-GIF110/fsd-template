@@ -3,23 +3,27 @@ import { Box, Flex } from "@chakra-ui/react";
 import { UserIcon } from "assets/icons/user-icon";
 import { colors } from "shared/config/colors";
 
-// interface UserPanelProps {
-//   isAuthorized: boolean;
-// }
-
 export const UserPanel = () => (
   <Flex
     as={ReactRouterLink}
     alignItems="center"
     backgroundColor={colors.white}
     color={colors.black}
-    padding="16px 24px"
+    padding="14px 26px"
     gap="12px"
-    maxWidth="240px"
     borderRadius="base"
   >
-    <Box as={UserIcon} width="24px" height="24px" textTransform="uppercase" />
+    <Box width="20px" height="20px" textTransform="uppercase">
+      <UserIcon />
+    </Box>
 
-    <Box fontWeight={700}>Личный кабинет</Box>
+    <Box
+      fontWeight={700}
+      fontSize="14px"
+      lineHeight="80%"
+      textTransform="uppercase"
+    >
+      Личный кабинет
+    </Box>
   </Flex>
 );

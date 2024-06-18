@@ -506,7 +506,7 @@
 
 /* Halvar Eng Start */
 @font-face {
-  font-family: "Halvar Eng XBd";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-XBdSlanted.eot");
   src:
     local("Halvar Engschrift ExtraBold Slanted"),
@@ -521,7 +521,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Blk";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-BlkSlanted.eot");
   src:
     local("Halvar Engschrift Black Slanted"),
@@ -536,7 +536,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Rg";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-BdSlanted.eot");
   src:
     local("Halvar Engschrift Bold Slanted"),
@@ -551,7 +551,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Blk SuSlanted";
+  font-family: "Halvar Engschrift";;
   src: url("../../assets/fonts/HalvarEng/HalvarEng-BlkSuSlanted.eot");
   src:
     local("Halvar Engschrift Black SuperSlanted"),
@@ -566,7 +566,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng XBd";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-XBd.eot");
   src:
     local("Halvar Engschrift ExtraBold"),
@@ -581,7 +581,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Blk";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-Blk.eot");
   src:
     local("Halvar Engschrift Black"),
@@ -596,7 +596,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Rg SuSlanted";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-BdSuSlanted.eot");
   src:
     local("Halvar Engschrift Bold SuperSlanted"),
@@ -611,7 +611,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Rg";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-Bd.eot");
   src:
     local("Halvar Engschrift Bold"),
@@ -626,7 +626,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng XTh SuSlanted";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-XThSuSlanted.eot");
   src:
     local("Halvar Engschrift ExtraThin SuperSlanted"),
@@ -641,7 +641,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng XTh";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-XTh.eot");
   src:
     local("Halvar Engschrift ExtraThin"),
@@ -656,7 +656,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng XTh";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-XThSlanted.eot");
   src:
     local("Halvar Engschrift ExtraThin Slanted"),
@@ -671,7 +671,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng XBd SuSlanted";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-XBdSuSlanted.eot");
   src:
     local("Halvar Engschrift ExtraBold SuperSlanted"),
@@ -686,7 +686,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Hl SuSlanted";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-HlSuSlanted.eot");
   src:
     local("Halvar Engschrift Hairline SuperSlanted"),
@@ -701,7 +701,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Th";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-ThSlanted.eot");
   src:
     local("Halvar Engschrift Thin Slanted"),
@@ -716,7 +716,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Md";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-Md.eot");
   src:
     local("Halvar Engschrift Medium"),
@@ -731,7 +731,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Hl";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-HlSlanted.eot");
   src:
     local("Halvar Engschrift Hairline Slanted"),
@@ -746,7 +746,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Lt";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-Lt.eot");
   src:
     local("Halvar Engschrift Light"),
@@ -761,7 +761,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Rg SuSlanted";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-RgSuSlanted.eot");
   src:
     local("Halvar Engschrift Regular SuperSlanted"),
@@ -776,7 +776,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Lt SuSlanted";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-LtSuSlanted.eot");
   src:
     local("Halvar Engschrift Light SuperSlanted"),
@@ -791,7 +791,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Th SuSlanted";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-ThSuSlanted.eot");
   src:
     local("Halvar Engschrift Thin SuperSlanted"),
@@ -806,7 +806,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Md";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-MdSlanted.eot");
   src:
     local("Halvar Engschrift Medium Slanted"),
@@ -821,7 +821,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Th";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-Th.eot");
   src:
     local("Halvar Engschrift Thin"),
@@ -836,7 +836,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Rg";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-RgSlanted.eot");
   src:
     local("Halvar Engschrift Regular Slanted"),
@@ -851,7 +851,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Rg";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-Rg.eot");
   src:
     local("Halvar Engschrift Regular"),
@@ -866,7 +866,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Md SuSlanted";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-MdSuSlanted.eot");
   src:
     local("Halvar Engschrift Medium SuperSlanted"),
@@ -881,7 +881,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Hl";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-Hl.eot");
   src:
     local("Halvar Engschrift Hairline"),
@@ -896,7 +896,7 @@
 }
 
 @font-face {
-  font-family: "Halvar Eng Lt";
+  font-family: "Halvar Engschrift";
   src: url("../../assets/fonts/HalvarEng/HalvarEng-LtSlanted.eot");
   src:
     local("Halvar Engschrift Light Slanted"),
