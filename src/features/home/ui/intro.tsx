@@ -1,11 +1,9 @@
 import { Link as ReactRouterLink } from "react-router-dom";
 import { Box, Heading, Flex, Text, Link } from "@chakra-ui/react";
 import videoPlaceholder from "assets/images/home/video-placeholder.png";
-import girlImage from "assets/images/home/girl-image.png";
-import manImage from "assets/images/home/man-image.png";
+import introImage from "assets/images/home/home-intro.png";
 import BottomRightDecor from "assets/images/home/intro-decor-svg.svg?react";
 import ArrowUp from "assets/icons/arrow-up.svg?react";
-import { Graffiti } from "assets/images/home/graffiti";
 import { colors } from "shared/config/colors";
 
 const BottomLeftDecor = () => (
@@ -79,28 +77,14 @@ export const Intro = () => (
       <BottomRightDecor />
     </Flex>
 
-    <Box position="absolute" bottom={0} right="170px">
-      <Graffiti />
-    </Box>
-
     <Box
       as="img"
-      src={manImage}
-      width={1388}
-      height={851}
+      src={introImage}
       position="absolute"
-      bottom="-31px"
-      right="-83px"
-      objectFit="contain"
-    />
-    <Box
-      as="img"
-      src={girlImage}
-      width={962}
-      height={962}
-      position="absolute"
-      bottom="-60px"
-      left="230px"
+      top={0}
+      left={0}
+      width="100%"
+      height="100%"
       objectFit="contain"
     />
 
@@ -147,14 +131,11 @@ export const Intro = () => (
           display="flex"
           alignItems="center"
           gap="19px"
+          size="lg"
         >
           Начать игру
           <ArrowUp width={28} height={28} />
         </Link>
-
-        {/* <Button gap="19px" variant="large">
-          <ArrowUp />
-        </Button> */}
 
         <PlayersOnlineCount count={7420} />
       </Flex>

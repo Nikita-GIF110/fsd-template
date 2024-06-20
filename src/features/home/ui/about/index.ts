@@ -1,1 +1,1 @@
-export { About } from "./compose/about";
+export { AboutBlock } from "./compose/about";

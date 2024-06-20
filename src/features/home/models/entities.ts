@@ -1,4 +1,4 @@
-export interface News {
+export interface NewsEntity {
   isNew: boolean;
   header: string;
   subHeader: string;
@@ -10,8 +10,16 @@ export interface News {
   };
 }
 
-export interface SocialLink {
+export interface SocialLinkEntity {
   id: "youTube" | "discord" | "vk";
   to: string;
   label: string;
+}
+
+export interface ServerEntity {
+  id: number;
+  name: string;
+  onlineCount: number;
+  registeredCount: number;
+  link: string;
 }

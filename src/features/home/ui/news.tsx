@@ -2,15 +2,15 @@ import type { ReactNode } from "react";
 import { Link as ReactRouterLink } from "react-router-dom";
 import type { BoxProps } from "@chakra-ui/react";
 import { Grid, GridItem, Box, Badge, Stack, Link } from "@chakra-ui/react";
-import type { News } from "features/home/models";
+import type { NewsEntity } from "features/home/models";
 import { colors } from "shared/config/colors";
 import { ArrowUp } from "assets/icons/arrow-up";
 
 interface NewsProps {
-  news: Array<News>;
+  news: Array<NewsEntity>;
 }
 
-interface NewsItemProps extends BoxProps, News {
+interface NewsItemProps extends BoxProps, NewsEntity {
   isMainNews?: boolean;
 }
 
@@ -125,7 +125,13 @@ const NewsItem = ({
         </Box>
 
         {/* Bottom */}
-        <Link as={ReactRouterLink} to={to} variant="medium" gap="16px">
+        <Link
+          as={ReactRouterLink}
+          to={to}
+          variant="medium"
+          gap="16px"
+          size="md"
+        >
           Узнать больше
           <ArrowUp />
         </Link>

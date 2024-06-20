@@ -52,6 +52,7 @@ export const NewInStore = ({ image, header, subHeader }: NewInStoreProsp) => (
       variant="medium"
       marginLeft="auto"
       position="relative"
+      size="md"
     >
       открыть магазин
       <ArrowUp width={26} height={26} />
