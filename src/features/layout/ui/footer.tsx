@@ -10,9 +10,8 @@ export const Footer = ({ children, ...footerProps }: FooterProps) => (
   <Box
     as="footer"
     paddingY={2}
-    display="flex"
-    alignItems="center"
     marginTop="auto"
+    padding="120px 0"
     {...footerProps}
   >
     {children}

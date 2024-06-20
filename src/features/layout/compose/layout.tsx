@@ -8,14 +8,10 @@ import { Footer } from "features/layout/ui/footer";
 import { PageLoader } from "features/layout/ui/page-loader";
 import { Logo } from "features/layout/ui/logo";
 import { LanguageDropdown } from "features/layout/ui/language-dropdown";
-import { NAVIGATION } from "features/layout/config/base";
+import { HEADER_NAVIGATION, LANGUAGES } from "features/layout/config/base";
 import type { SelectOption } from "entities/utils";
 import { useI18N } from "shared/lib/useI18n";
 
-const languages = [
-  { label: "RU", value: "ru" },
-  { label: "EN", value: "en" },
-];
 
 export const Layout = () => {
   const { setLang } = useI18N();
@@ -34,10 +30,10 @@ export const Layout = () => {
             <Flex maxWidth="240px" flexGrow={1} alignItems="center">
               <Logo marginRight="auto" />
 
-              <LanguageDropdown languages={languages} onChage={setLanguage} />
+              <LanguageDropdown languages={LANGUAGES} onChage={setLanguage} />
             </Flex>
           }
-          centerNode={<MenuList list={NAVIGATION} margin="0 auto" />}
+          centerNode={<MenuList list={HEADER_NAVIGATION} margin="0 auto" />}
           rightNode={<UserPanel />}
         />
       </Box>

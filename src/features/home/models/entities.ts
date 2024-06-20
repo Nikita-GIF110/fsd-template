@@ -23,3 +23,20 @@ export interface ServerEntity {
   registeredCount: number;
   link: string;
 }
+
+export interface CharactersEntity {
+  id: number;
+  name: string;
+  link: string;
+  image: {
+    src: string;
+    alt: string;
+    title: string;
+  };
+}
+
+export interface QuestionEntity {
+  id: number;
+  name: string;
+  description: string;
+}

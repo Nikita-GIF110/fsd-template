@@ -10,13 +10,14 @@ interface StepProps {
 }
 
 export const Step = ({ stepIndex, header, description, footer }: StepProps) => (
-  <Box display="flex" flexDirection="column" rowGap="14px" textAlign="center">
+  <Box display="flex" flexDirection="column" textAlign="center">
     <Box
       color={colors.green.primary}
       fontSize="20px"
       fontWeight={900}
       lineHeight="100%"
       textTransform="uppercase"
+      marginBottom="14px"
     >
       {stepIndex}
     </Box>
@@ -28,6 +29,7 @@ export const Step = ({ stepIndex, header, description, footer }: StepProps) => (
       lineHeight="100%"
       textTransform="uppercase"
       letterSpacing="-0.56px"
+      marginBottom="14px"
     >
       {header}
     </Box>
@@ -37,9 +39,8 @@ export const Step = ({ stepIndex, header, description, footer }: StepProps) => (
       fontSize="16px"
       fontWeight={500}
       lineHeight="130%"
-      textTransform="uppercase"
       opacity={0.6}
-      marginBottom="48px"
+      marginBottom="50px"
       letterSpacing="-1px"
     >
       {description}

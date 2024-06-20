@@ -24,16 +24,6 @@ export const StartPlay = ({ header }: StartPlayProps) => (
           description="Лицензионную GTA 5 можно купить в Steam, Epic Games или на других площадках цифровой дистрибуции."
           footer={
             <>
-              <Box
-                width="100%"
-                marginBottom="12px"
-                fontSize="16px"
-                fontWeight={500}
-                textTransform="uppercase"
-                color={colors.white}
-              >
-                Купить в
-              </Box>
               <Flex gap="8px" justifyContent="center">
                 <Link
                   as={ReactRouterLink}
@@ -78,7 +68,13 @@ export const StartPlay = ({ header }: StartPlayProps) => (
           header="Установите 1wrp Multiplayer"
           description="Загрузите официальный лаунчер 1WRP. По окончании загрузки произведите установку лаунчера в место, не включающее файлы игры и без использования кириллических символов в пути."
           footer={
-            <Link as={ReactRouterLink} variant="smallRoundedPrimary" size="sm">
+            <Link
+              as={ReactRouterLink}
+              variant="smallRoundedPrimary"
+              size="sm"
+              paddingTop="21px"
+              paddingBottom="21px"
+            >
               скачать лаунчер
             </Link>
           }
@@ -102,7 +98,13 @@ export const StartPlay = ({ header }: StartPlayProps) => (
           header="Запустите лаунчер и подключайтесь"
           description="Запустите лаунчер и в открывшемся окне введите IP адрес выбранного сервера."
           footer={
-            <Link as={ReactRouterLink} variant="smallRoundedLight" size="sm">
+            <Link
+              as={ReactRouterLink}
+              variant="smallRoundedLight"
+              size="sm"
+              paddingTop="21px"
+              paddingBottom="21px"
+            >
               выбрать сервер
             </Link>
           }

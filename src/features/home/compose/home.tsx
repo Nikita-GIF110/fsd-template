@@ -5,14 +5,22 @@ import { Header } from "features/home/ui/header";
 import { NewInStore } from "features/home/ui/new-in-store";
 import { StartPlay } from "features/home/ui/start-play";
 import { ServersBlock, ServersHeader } from "features/home/ui/servers";
+import { CharactersBlock } from "features/home/ui/characters";
+import { Faq } from "features/home/ui/faq";
+import { Contacts } from "features/home/ui/contacts";
 import {
   NEWS_LIST,
   SOCIAL_LINK_LIST,
   SERVERS_LIST,
+  CHARACTERS_GOVERNMENT_AGENCIES_LIST,
+  CHARACTERS_STREER_GROUPS_AGENCIES_LIST,
+  CHARACTERS_MAFIA_AGENCIES_LIST,
+  QUESTIONS,
 } from "features/home/config/base";
 import { Container } from "shared/ui/container";
 import newInStoreImage from "assets/images/home/new-in-store-image.png";
 import { Box } from "@chakra-ui/react";
+import "swiper/css";
 
 const Home = () => (
   <>
@@ -47,9 +55,33 @@ const Home = () => (
       <ServersBlock servers={SERVERS_LIST} />
     </Container>
 
-    <Container padding={0} marginBottom="52px">
+    <Container padding={0} marginBottom="151px">
       <StartPlay header="Как начать играть в" />
     </Container>
+
+    <Container padding={0} marginBottom="52px">
+      <CharactersBlock
+        government={CHARACTERS_GOVERNMENT_AGENCIES_LIST}
+        groups={CHARACTERS_STREER_GROUPS_AGENCIES_LIST}
+        mafia={CHARACTERS_MAFIA_AGENCIES_LIST}
+      />
+    </Container>
+
+    <Container padding={0} marginBottom="52px">
+      <Faq
+        questions={QUESTIONS}
+        header="появились вопросы или возникли проблемы?"
+        description="Если вы не смогли найти ответ на свой вопрос из списка, то можете обратиться в нашу службу поддержки. Мы стараемся всегда улучшать нам проект что бы подарить вам как можно больше эмоций."
+        linkText="чат поддержки"
+        to="/questions"
+      />
+    </Container>
+
+    <Contacts />
+
+    {/* <Container padding={0} marginBottom="52px">
+      
+    </Container> */}
   </>
 );
 
