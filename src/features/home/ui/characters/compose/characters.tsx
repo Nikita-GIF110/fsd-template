@@ -31,7 +31,7 @@ export const CharactersBlock = ({
         <Box minWidth="0%" flexGrow={1} height="300px">
           <Swiper slidesPerView={8} spaceBetween={20}>
             {government.map((character) => (
-              <SwiperSlide key={character.id}>
+              <SwiperSlide key={character.image.src}>
                 <CharacterTile {...character} gradientVariant="blue" />
               </SwiperSlide>
             ))}
@@ -50,7 +50,7 @@ export const CharactersBlock = ({
         <Box minWidth="0%" flexGrow={1} height="300px">
           <Swiper slidesPerView={3} spaceBetween={20}>
             {groups.map((character) => (
-              <SwiperSlide key={character.id}>
+              <SwiperSlide key={character.image.src}>
                 <CharacterTile
                   {...character}
                   gradientVariant="violet"
@@ -73,7 +73,7 @@ export const CharactersBlock = ({
         <Box minWidth="0%" flexGrow={1} height="300px">
           <Swiper slidesPerView={3} spaceBetween={20}>
             {mafia.map((character) => (
-              <SwiperSlide key={character.id}>
+              <SwiperSlide key={character.image.src}>
                 <CharacterTile
                   {...character}
                   gradientVariant="red"

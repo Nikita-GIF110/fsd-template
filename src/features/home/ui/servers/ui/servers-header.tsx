@@ -19,7 +19,9 @@ export const ServersHeader = ({
     fontFamily="Halvar Breitschrift"
     color={colors.blue.primary}
     whiteSpace="nowrap"
-    marginLeft="-18px"
+    // marginLeft="auto"
+    // marginRight="auto"
+    transform="translateX(-18px)"
   >
     {header}
   </Box>

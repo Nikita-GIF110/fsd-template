@@ -10,6 +10,7 @@ const linkStyles = {
   height: "auto",
   display: "inline-flex",
   alignItems: "center",
+  position: "relative",
 };
 
 export const Link = defineStyleConfig({
@@ -19,23 +20,58 @@ export const Link = defineStyleConfig({
       color: colors.black,
       backgroundColor: colors.green.primary,
       borderRadius: "md",
+      overflow: "hidden",
+
+      _before: {
+        content: "''",
+        display: "block",
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        transform: "translateY(100%)",
+        backgroundColor: colors.green.secondary,
+        transition: "transform 0.2s ease-in",
+        opacity: 0.67,
+        pointerEvents: "none",
+      },
 
       _hover: {
-        backgroundColor: colors.green.secondary,
+        _before: {
+          transform: "translateY(0)",
+        },
       },
       _active: {
         backgroundColor: colors.gray.secondary,
       },
     }),
-
     medium: defineStyle({
       ...linkStyles,
       color: colors.black,
       backgroundColor: colors.green.primary,
       borderRadius: "md",
+      overflow: "hidden",
+
+      _before: {
+        content: "''",
+        display: "block",
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        transform: "translateY(100%)",
+        backgroundColor: colors.green.secondary,
+        transition: "transform 0.2s ease-in",
+        opacity: 0.67,
+        pointerEvents: "none",
+      },
 
       _hover: {
-        backgroundColor: colors.green.secondary,
+        _before: {
+          transform: "translateY(0)",
+        },
       },
       _active: {
         backgroundColor: colors.gray.secondary,
@@ -82,6 +118,9 @@ export const Link = defineStyleConfig({
           bottom: "-5px",
         },
       },
+      _active: {
+        color: "rgba(0, 0, 0, 0.6)",
+      },
     }),
     smallRoundedLight: defineStyle({
       ...linkStyles,
@@ -122,6 +161,9 @@ export const Link = defineStyleConfig({
         _after: {
           bottom: "-5px",
         },
+      },
+      _active: {
+        color: "rgba(0, 0, 0, 0.6)",
       },
     }),
   },

@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import { AboutBlock } from "features/home/ui/about";
 import { Intro } from "features/home/ui/intro";
 import { NewsBlock } from "features/home/ui/news";
@@ -19,7 +20,6 @@ import {
 } from "features/home/config/base";
 import { Container } from "shared/ui/container";
 import newInStoreImage from "assets/images/home/new-in-store-image.png";
-import { Box } from "@chakra-ui/react";
 import "swiper/css";
 
 const Home = () => (
@@ -49,7 +49,9 @@ const Home = () => (
       <AboutBlock links={SOCIAL_LINK_LIST} />
     </Container>
 
-    <ServersHeader header="Сервера 1wrp" marginBottom="44px" />
+    <Box marginBottom="44px" textAlign="center">
+      <ServersHeader header="Сервера 1wrp" />
+    </Box>
 
     <Container padding={0} marginBottom="138px">
       <ServersBlock servers={SERVERS_LIST} />
@@ -67,7 +69,7 @@ const Home = () => (
       />
     </Container>
 
-    <Container padding={0} marginBottom="52px">
+    <Container padding={0} marginBottom="72px">
       <Faq
         questions={QUESTIONS}
         header="появились вопросы или возникли проблемы?"
@@ -78,10 +80,6 @@ const Home = () => (
     </Container>
 
     <Contacts />
-
-    {/* <Container padding={0} marginBottom="52px">
-      
-    </Container> */}
   </>
 );
 

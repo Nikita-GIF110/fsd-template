@@ -10,8 +10,9 @@ import { Logo } from "features/layout/ui/logo";
 import { LanguageDropdown } from "features/layout/ui/language-dropdown";
 import { HEADER_NAVIGATION, LANGUAGES } from "features/layout/config/base";
 import type { SelectOption } from "entities/utils";
-import { useI18N } from "shared/lib/useI18n";
+import payments from "assets/images/payments.png";
 
+import { useI18N } from "shared/lib/useI18n";
 
 export const Layout = () => {
   const { setLang } = useI18N();
@@ -29,7 +30,6 @@ export const Layout = () => {
           leftNode={
             <Flex maxWidth="240px" flexGrow={1} alignItems="center">
               <Logo marginRight="auto" />
-
               <LanguageDropdown languages={LANGUAGES} onChage={setLanguage} />
             </Flex>
           }
@@ -42,7 +42,19 @@ export const Layout = () => {
         <Outlet />
       </Suspense>
 
-      <Footer>footer</Footer>
+      <Footer
+        logo={
+          <Flex alignItems="center" justifyContent="space-between">
+            <Flex maxWidth="240px" flexGrow={1} alignItems="center">
+              <Logo marginRight="auto" width="160px" height="39px" />
+
+              <LanguageDropdown languages={LANGUAGES} onChage={setLanguage} />
+            </Flex>
+
+            <Box as="img" src={payments} />
+          </Flex>
+        }
+      />
     </>
   );
 };

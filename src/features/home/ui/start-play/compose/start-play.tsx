@@ -3,7 +3,6 @@ import { Box, Flex, Link } from "@chakra-ui/react";
 import SteamIcon from "assets/icons/steam.svg?react";
 import EpicGamesIcon from "assets/icons/epic-games.svg?react";
 import StepArrowIcon from "assets/images/home/step-arrow-icon.svg?react";
-import { colors } from "shared/config/colors";
 import { StartPlayHeader } from "../ui/start-play-header";
 import { Step } from "../ui/step";
 import { Separator } from "../ui/separator";
@@ -29,21 +28,19 @@ export const StartPlay = ({ header }: StartPlayProps) => (
                   as={ReactRouterLink}
                   variant="smallRoundedLight"
                   size="sm"
+                  gap="12px"
                 >
                   <SteamIcon width={20} height={20} />
-                  <Box marginLeft="12px" color={colors.black}>
-                    steam
-                  </Box>
+                  steam
                 </Link>
                 <Link
                   as={ReactRouterLink}
                   variant="smallRoundedLight"
                   size="sm"
+                  gap="12px"
                 >
                   <EpicGamesIcon width={20} height={20} />
-                  <Box marginLeft="12px" color={colors.black}>
-                    epic games
-                  </Box>
+                  epic games
                 </Link>
               </Flex>
             </>

@@ -91,6 +91,7 @@ export const Button = defineStyleConfig({
       fontFamily: "Halvar Breitschrift",
       borderRadius: "base",
       backgroundColor: colors.white,
+      // transition: "",
 
       _before: {
         content: "''",
@@ -124,6 +125,9 @@ export const Button = defineStyleConfig({
         _after: {
           bottom: "-5px",
         },
+      },
+      _active: {
+        color: "rgba(0, 0, 0, 0.6)",
       },
     }),
 

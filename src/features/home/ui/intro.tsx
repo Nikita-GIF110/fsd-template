@@ -86,6 +86,7 @@ export const Intro = () => (
       width="100%"
       height="100%"
       objectFit="contain"
+      pointerEvents="none"
     />
 
     <Flex
@@ -133,7 +134,7 @@ export const Intro = () => (
           gap="19px"
           size="lg"
         >
-          Начать игру
+          <span>Начать игру</span>
           <ArrowUp width={28} height={28} />
         </Link>
 

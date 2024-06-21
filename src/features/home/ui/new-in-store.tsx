@@ -20,6 +20,15 @@ export const NewInStore = ({ image, header, subHeader }: NewInStoreProsp) => (
     position="relative"
   >
     <Box
+      as="img"
+      src={image}
+      position="absolute"
+      top={0}
+      right={0}
+      pointerEvents="none"
+    />
+
+    <Box
       fontFamily="Halvar Engschrift"
       fontSize="56px"
       fontWeight={700}
@@ -32,18 +41,16 @@ export const NewInStore = ({ image, header, subHeader }: NewInStoreProsp) => (
     </Box>
 
     <Box
-      fontFamily="Halvar Breitschrift"
       fontSize="16px"
       fontWeight={500}
       lineHeight="130%"
       letterSpacing="-0.5px"
       color={colors.white}
       maxWidth="286px"
+      position="relative"
     >
       {subHeader}
     </Box>
-
-    <Box as="img" src={image} position="absolute" top={0} right="0px" />
 
     <Link
       as={ReactRouterLink}

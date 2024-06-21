@@ -4,7 +4,7 @@ import { colors } from "shared/config/colors";
 
 export const AboutHeader = () => (
   <Flex alignItems="center" columnGap="16px">
-    <Logo />
+    <Box as={Logo} width="140px" height="32px" />
     <Box
       fontSize="44px"
       fontWeight={700}
