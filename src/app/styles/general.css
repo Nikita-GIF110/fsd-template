@@ -41,3 +41,11 @@ a:hover {
 .lazyload-wrapper {
   display: inline-block;
 }
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}

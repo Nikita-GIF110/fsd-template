@@ -32,7 +32,7 @@ const MenuItem = ({ to, children }: MenuItemProps) => (
   </Link>
 );
 
-export const MenuList = ({ list, ...otherListProps }: MenuListProps) => (
+export const MenuListDesktop = ({ list, ...otherListProps }: MenuListProps) => (
   <List display="flex" alignItems="center" {...otherListProps}>
     {list.map((link, index) => (
       <ListItem
@@ -69,7 +69,7 @@ export const MenuList = ({ list, ...otherListProps }: MenuListProps) => (
           },
           _after: {
             transform: "translateX(-50%) scale(1)",
-          }
+          },
         }}
       >
         <MenuItem to={link.to}>
@@ -88,6 +88,26 @@ export const MenuList = ({ list, ...otherListProps }: MenuListProps) => (
             </Box>
           )}
         </MenuItem>
+      </ListItem>
+    ))}
+  </List>
+);
+
+export const MenuListMobile = ({ list, ...otherListProps }: MenuListProps) => (
+  <List {...otherListProps}>
+    {list.map((item) => (
+      <ListItem
+        as={ReactRouterLink}
+        to={item.to}
+        key={item.label}
+        padding="18px 32px"
+        color={colors.white}
+        display="block"
+        _hover={{
+          color: colors.acidic.primary,
+        }}
+      >
+        {item.label}
       </ListItem>
     ))}
   </List>

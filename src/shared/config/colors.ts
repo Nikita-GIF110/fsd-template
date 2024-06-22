@@ -6,15 +6,15 @@ export const colors = {
     primary: "#dae7f4",
     secondary: "#EEF4F8",
   },
-  green: {
-    primary: "#D3FF26",
-    secondary: "#EAFF96",
-  },
   blue: {
     primary: "#00A3FF",
     secondary: "#0052B3",
   },
   violet: {
     primary: "#AB22FF",
+  },
+  acidic: {
+    primary: "#D3FF26",
+    secondary: "#EAFF96",
   },
 };

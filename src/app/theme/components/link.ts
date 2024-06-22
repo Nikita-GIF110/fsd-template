@@ -18,7 +18,7 @@ export const Link = defineStyleConfig({
     large: defineStyle({
       ...linkStyles,
       color: colors.black,
-      backgroundColor: colors.green.primary,
+      backgroundColor: colors.acidic.primary,
       borderRadius: "md",
       overflow: "hidden",
 
@@ -31,7 +31,7 @@ export const Link = defineStyleConfig({
         width: "100%",
         height: "100%",
         transform: "translateY(100%)",
-        backgroundColor: colors.green.secondary,
+        backgroundColor: colors.acidic.secondary,
         transition: "transform 0.2s ease-in",
         opacity: 0.67,
         pointerEvents: "none",
@@ -49,7 +49,7 @@ export const Link = defineStyleConfig({
     medium: defineStyle({
       ...linkStyles,
       color: colors.black,
-      backgroundColor: colors.green.primary,
+      backgroundColor: colors.acidic.primary,
       borderRadius: "md",
       overflow: "hidden",
 
@@ -62,7 +62,7 @@ export const Link = defineStyleConfig({
         width: "100%",
         height: "100%",
         transform: "translateY(100%)",
-        backgroundColor: colors.green.secondary,
+        backgroundColor: colors.acidic.secondary,
         transition: "transform 0.2s ease-in",
         opacity: 0.67,
         pointerEvents: "none",
@@ -81,7 +81,7 @@ export const Link = defineStyleConfig({
     smallRoundedPrimary: defineStyle({
       ...linkStyles,
       fontFamily: "Halvar Breitschrift",
-      backgroundColor: colors.green.primary,
+      backgroundColor: colors.acidic.primary,
       borderRadius: "base",
       position: "relative",
 

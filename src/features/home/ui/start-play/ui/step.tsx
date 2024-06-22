@@ -12,7 +12,7 @@ interface StepProps {
 export const Step = ({ stepIndex, header, description, footer }: StepProps) => (
   <Box display="flex" flexDirection="column" textAlign="center">
     <Box
-      color={colors.green.primary}
+      color={colors.acidic.primary}
       fontSize="20px"
       fontWeight={900}
       lineHeight="100%"

@@ -1,6 +1,7 @@
 import { Box, Flex, Button } from "@chakra-ui/react";
 import { useClipboard } from "@chakra-ui/react";
 import { colors } from "shared/config/colors";
+import { useMediaQuery } from "shared/lib/useMediaQuery";
 import TileDecorFrame from "assets/images/home/server-tile-decor-frame-1.svg?react";
 import ServerIcon from "assets/images/home/server-icon-1.svg?react";
 import CopyIcon from "assets/icons/copy-icon.svg?react";
@@ -19,39 +20,50 @@ interface StatisticsItem {
   count: number;
 }
 
-const StatisticsItem = ({ header, count }: StatisticsItem) => (
-  <Flex flexDirection="column" rowGap="6px">
-    <Box
-      color={colors.black}
-      opacity={0.4}
-      fontSize="12px"
-      fontWeight={500}
-      lineHeight="100%"
-      textTransform="uppercase"
-    >
-      {header}
-    </Box>
-    <Box
-      fontSize="32px"
-      fontWeight={900}
-      lineHeight="80%"
-      textTransform="uppercase"
-    >
-      {count}
-    </Box>
-  </Flex>
-);
+const StatisticsItem = ({ header, count }: StatisticsItem) => {
+  const { isDesktop } = useMediaQuery();
+
+  return (
+    <Flex flexDirection="column" rowGap="6px">
+      <Box
+        color={colors.black}
+        opacity={0.4}
+        fontSize={isDesktop ? "12px" : "10px"}
+        fontWeight={500}
+        lineHeight="100%"
+        textTransform="uppercase"
+      >
+        {header}
+      </Box>
+      <Box
+        fontSize={isDesktop ? "32px" : "24px"}
+        fontWeight={900}
+        lineHeight="80%"
+        textTransform="uppercase"
+      >
+        {count}
+      </Box>
+    </Flex>
+  );
+};
 const CopyButton = ({ text }: { text: string }) => {
   const { onCopy, hasCopied, setValue } = useClipboard("");
 
   return (
     <Box
       position="relative"
-      borderRadius="md"
+      borderRadius="6px"
       overflow="hidden"
       cursor="pointer"
     >
-      <Button variant="mediumDark" size="md" fontSize="20px">
+      <Button
+        variant="mediumDark"
+        size="md"
+        fontSize="20px"
+        overflow="hidden"
+        textOverflow="ellipsis"
+        whiteSpace="nowrap"
+      >
         {text}
       </Button>
 
@@ -88,6 +100,8 @@ export const ServerTile = ({
   registeredCount,
   link,
 }: ServerTileProps) => {
+  const { isDesktop } = useMediaQuery();
+
   return (
     <Flex
       flexDirection="column"
@@ -95,7 +109,7 @@ export const ServerTile = ({
       backgroundColor={colors.white}
       borderRadius="md"
       position="relative"
-      padding="27px 40px 27px 100px"
+      padding={isDesktop ? "27px 40px 27px 100px" : "24px 24px 24px 80px"}
     >
       <Box as={TileDecorFrame} position="absolute" top="-4px" left="-69px" />
 
@@ -109,7 +123,7 @@ export const ServerTile = ({
       />
 
       <Box
-        fontSize="40px"
+        fontSize={isDesktop ? "40px" : "24px"}
         fontWeight={900}
         lineHeight="100%"
         textTransform="uppercase"
@@ -117,7 +131,11 @@ export const ServerTile = ({
         {name}
       </Box>
 
-      <Flex justifyContent="space-between">
+      <Flex
+        justifyContent="space-between"
+        rowGap="20px"
+        flexDirection={isDesktop ? "row" : "column"}
+      >
         <StatisticsItem header="онлайн игроков" count={onlineCount} />
         <StatisticsItem header="зарегистрировано" count={registeredCount} />
       </Flex>

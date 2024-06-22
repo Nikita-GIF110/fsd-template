@@ -8,7 +8,7 @@ interface HeaderProps extends BoxProps {
   centerNode?: ReactNode;
 }
 
-export const Header = ({
+export const HeaderDesktop = ({
   rightNode,
   centerNode,
   leftNode,
@@ -19,6 +19,26 @@ export const Header = ({
     padding="32px 40px"
     display="flex"
     alignItems="center"
+    {...headerProps}
+  >
+    {leftNode}
+    {centerNode}
+    {rightNode}
+  </Box>
+);
+
+export const HeaderMobile = ({
+  rightNode,
+  centerNode,
+  leftNode,
+  ...headerProps
+}: HeaderProps) => (
+  <Box
+    as="header"
+    paddingLeft="40px"
+    display="flex"
+    alignItems="center"
+    justifyContent="space-between"
     {...headerProps}
   >
     {leftNode}

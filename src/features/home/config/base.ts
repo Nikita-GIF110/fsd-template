@@ -22,6 +22,11 @@ import banda3 from "assets/images/home/profession/Banda-3.png";
 import mafia1 from "assets/images/home/profession/mafia-1.png";
 import mafia2 from "assets/images/home/profession/mafia-2.png";
 import mafia3 from "assets/images/home/profession/mafia-3.png";
+// News
+import news1 from "assets/images/home/news-image-1.png"
+import news2 from "assets/images/home/news-image-1.png"
+import news3 from "assets/images/home/news-image-3.png"
+import news4 from "assets/images/home/news-image-2.png"
 
 export const NEWS_LIST: Array<NewsEntity> = [
   {
@@ -30,7 +35,7 @@ export const NEWS_LIST: Array<NewsEntity> = [
     subHeader: "Представляем вам обновленную систем фракция",
     to: "/",
     image: {
-      src: "/src/assets/images/home/news-image-1.png",
+      src: news1,
       alt: "",
       title: "",
     },
@@ -41,7 +46,7 @@ export const NEWS_LIST: Array<NewsEntity> = [
     subHeader: "Что бы увидеть новые возможности",
     to: "/",
     image: {
-      src: "/src/assets/images/home/news-image-1.png",
+      src: news2,
       alt: "",
       title: "",
     },
@@ -52,7 +57,7 @@ export const NEWS_LIST: Array<NewsEntity> = [
     subHeader: "Что бы увидеть новые возможности",
     to: "/",
     image: {
-      src: "/src/assets/images/home/news-image-2.png",
+      src: news3,
       alt: "",
       title: "",
     },
@@ -63,7 +68,7 @@ export const NEWS_LIST: Array<NewsEntity> = [
     subHeader: "Что бы увидеть новые возможности",
     to: "/",
     image: {
-      src: "/src/assets/images/home/news-image-3.png",
+      src: news4,
       alt: "",
       title: "",
     },
@@ -98,35 +103,35 @@ export const SERVERS_LIST: Array<ServerEntity> = [
   },
   {
     id: 2,
-    name: "сервер 1",
+    name: "сервер 2",
     onlineCount: 7457,
     registeredCount: 7457,
     link: "server1.oneroleplay.com:22005",
   },
   {
     id: 3,
-    name: "сервер 1",
+    name: "сервер 3",
     onlineCount: 7457,
     registeredCount: 7457,
     link: "server1.oneroleplay.com:22005",
   },
   {
     id: 4,
-    name: "сервер 1",
+    name: "сервер 4",
     onlineCount: 7457,
     registeredCount: 7457,
     link: "server1.oneroleplay.com:22005",
   },
   {
     id: 5,
-    name: "сервер 1",
+    name: "сервер 5",
     onlineCount: 7457,
     registeredCount: 7457,
     link: "server1.oneroleplay.com:22005",
   },
   {
     id: 6,
-    name: "сервер 1",
+    name: "сервер 6",
     onlineCount: 7457,
     registeredCount: 7457,
     link: "server1.oneroleplay.com:22005",

@@ -1,10 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, Flex } from "@chakra-ui/react";
 import type { CharactersEntity } from "features/home/models";
+import { colors } from "shared/config/colors";
+import { useMediaQuery } from "shared/lib/useMediaQuery";
 import { CharactersHeader } from "../ui/characters-header";
 import { CharactersListHeader } from "../ui/characters-list-header";
 import { CharacterTile } from "../ui/character-tile";
-import { colors } from "shared/config/colors";
 
 interface CharactersBlockProps {
   government: Array<CharactersEntity>;
@@ -16,39 +17,62 @@ export const CharactersBlock = ({
   government = [],
   groups = [],
   mafia = [],
-}: CharactersBlockProps) => (
-  <Box>
-    <CharactersHeader marginBottom="24px" />
+}: CharactersBlockProps) => {
+  const { isDesktop } = useMediaQuery();
 
-    <Flex rowGap="40px" flexDirection="column">
-      {/* Row start */}
-      <Flex columnGap="20px" maxHeight="300px" paddingLeft="57px">
-        <CharactersListHeader
-          header="Государственные структуры"
-          color={colors.violet.primary}
-        />
+  return (
+    <Box>
+      <CharactersHeader marginBottom="24px" />
 
-        <Box minWidth="0%" flexGrow={1} height="300px">
-          <Swiper slidesPerView={8} spaceBetween={20}>
+      <Flex rowGap={isDesktop ? "40px" : "8px"} flexDirection="column">
+        {/* Government start */}
+        <Flex
+          columnGap={isDesktop ? "20px" : "8px"}
+          maxHeight="300px"
+          paddingLeft={isDesktop ? "57px" : "28px"}
+        >
+          <CharactersListHeader
+            header="Государственные структуры"
+            color={colors.blue.primary}
+          />
+
+          <Box
+            as={Swiper}
+            minWidth="0%"
+            flexGrow={1}
+            height="300px"
+            slidesPerView={isDesktop ? 8 : 3.8}
+            spaceBetween={isDesktop ? 20 : 8}
+            // className="overflow-visible"
+          >
             {government.map((character) => (
               <SwiperSlide key={character.image.src}>
                 <CharacterTile {...character} gradientVariant="blue" />
               </SwiperSlide>
             ))}
-          </Swiper>
-        </Box>
-      </Flex>
-      {/* Row start */}
+          </Box>
+        </Flex>
+        {/* Government end */}
 
-      {/* Row start */}
-      <Flex columnGap="20px" maxHeight="300px" paddingLeft="57px">
-        <CharactersListHeader
-          header="Уличные группировки"
-          color={colors.violet.primary}
-        />
+        {/* Groups start */}
+        <Flex
+          columnGap={isDesktop ? "20px" : "8px"}
+          maxHeight="300px"
+          paddingLeft={isDesktop ? "57px" : "28px"}
+        >
+          <CharactersListHeader
+            header="Уличные группировки"
+            color={colors.violet.primary}
+          />
 
-        <Box minWidth="0%" flexGrow={1} height="300px">
-          <Swiper slidesPerView={3} spaceBetween={20}>
+          <Box
+            as={Swiper}
+            minWidth="0%"
+            flexGrow={1}
+            height="300px"
+            slidesPerView={isDesktop ? 3 : 1.35}
+            spaceBetween={isDesktop ? 20 : 8}
+          >
             {groups.map((character) => (
               <SwiperSlide key={character.image.src}>
                 <CharacterTile
@@ -58,20 +82,29 @@ export const CharactersBlock = ({
                 />
               </SwiperSlide>
             ))}
-          </Swiper>
-        </Box>
-      </Flex>
-      {/* Row start */}
+          </Box>
+        </Flex>
+        {/* Groups end */}
 
-      {/* Row start */}
-      <Flex columnGap="20px" maxHeight="300px" paddingLeft="57px">
-        <CharactersListHeader
-          header="Уличные группировки"
-          color={colors.violet.primary}
-        />
+        {/* Mafia start */}
+        <Flex
+          columnGap={isDesktop ? "20px" : "8px"}
+          maxHeight="300px"
+          paddingLeft={isDesktop ? "57px" : "28px"}
+        >
+          <CharactersListHeader
+            header="Уличные группировки"
+            color={colors.violet.primary}
+          />
 
-        <Box minWidth="0%" flexGrow={1} height="300px">
-          <Swiper slidesPerView={3} spaceBetween={20}>
+          <Box
+            as={Swiper}
+            minWidth="0%"
+            flexGrow={1}
+            height="300px"
+            slidesPerView={isDesktop ? 3 : 1.35}
+            spaceBetween={isDesktop ? 20 : 8}
+          >
             {mafia.map((character) => (
               <SwiperSlide key={character.image.src}>
                 <CharacterTile
@@ -81,10 +114,10 @@ export const CharactersBlock = ({
                 />
               </SwiperSlide>
             ))}
-          </Swiper>
-        </Box>
+          </Box>
+        </Flex>
+        {/* Mafia end */}
       </Flex>
-      {/* Row start */}
-    </Flex>
-  </Box>
-);
+    </Box>
+  );
+};

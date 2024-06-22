@@ -18,7 +18,7 @@ export const Button = defineStyleConfig({
       borderRadius: "md",
 
       _hover: {
-        backgroundColor: colors.green.secondary,
+        backgroundColor: colors.acidic.secondary,
       },
       _active: {
         backgroundColor: colors.gray.secondary,
@@ -31,7 +31,7 @@ export const Button = defineStyleConfig({
       borderRadius: "md",
 
       _hover: {
-        backgroundColor: colors.green.secondary,
+        backgroundColor: colors.acidic.secondary,
       },
       _active: {
         backgroundColor: colors.gray.secondary,
@@ -49,7 +49,7 @@ export const Button = defineStyleConfig({
       ...buttonStyles,
       fontFamily: "Halvar Breitschrift",
       borderRadius: "base",
-      backgroundColor: colors.green.primary,
+      backgroundColor: colors.acidic.primary,
 
       _before: {
         content: "''",
@@ -128,6 +128,24 @@ export const Button = defineStyleConfig({
       },
       _active: {
         color: "rgba(0, 0, 0, 0.6)",
+      },
+    }),
+    roundedLight: defineStyle({
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      color: colors.black,
+      padding: "12px",
+      borderRadius: "100%",
+      backgroundColor: colors.white,
+      minHeight: "48px",
+      minWidth: "48px",
+
+      _hover: {
+        backgroundColor: colors.blue.primary,
+      },
+      _active: {
+        backgroundColor: "#ffffff",
       },
     }),
 
